@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import User from './components/User'
+import News from './components/News'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 
@@ -15,7 +16,8 @@ Vue.http.options.xhr = {withCredentials: true}
 
 const router = new VueRouter({
   routes: [
-    { path: '/user/:id', component: User }
+    { path: '/user/:id', component: User },
+    { path: '/news/:id', component: News }
   ]
 })
 

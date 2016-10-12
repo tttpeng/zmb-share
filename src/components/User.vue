@@ -22,7 +22,7 @@
     methods: {
       fetchNews (id) {
         console.log('!!!--!!!')
-        this.$http.get('http://115.28.67.218:88/products')
+        this.$http.get('http://101.201.48.88:6060/new/4')
         .then(response => {
           console.log('success!')
           this.news = response.data.result
