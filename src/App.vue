@@ -3,15 +3,18 @@
     <zmbNav class="cov-nav" />
     <div class="content">
       <router-view></router-view>
-    <!-- </div> -->
+    </div>
+<downBar/>
   </div>
 </template>
 
 <script>
   import zmbNav from './components/nav'
+  import downBar from './components/downBar'
   export default {
     components: {
-      zmbNav
+      zmbNav,
+      downBar
     }
   }
 </script>
@@ -51,5 +54,14 @@
  }
 
  .cov-nav {
+  /*position: relative;*/
+  height: 6rem;
+  /*width: 100%;*/
+  /*background-color: #42b983;*/
+  top: 0;
+  left: 0;
+  z-index: 2;
+  font-size: 1.5rem;
+  color: #fff;
 }
 </style>
