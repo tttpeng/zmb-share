@@ -1,41 +1,43 @@
 <template>
-  <div id="app">    
-    <div class="cov-nav" />
-    <router-view></router-view>
+  <div class="container">    
+    <zmbNav class="cov-nav" />
+    <div class="content">
+      <router-view></router-view>
+    <!-- </div> -->
   </div>
 </template>
 
 <script>
-  import Hello from './components/Hello'
-
+  import zmbNav from './components/nav'
   export default {
     components: {
-      Hello
+      zmbNav
     }
   }
 </script>
 
 <style>
   html {
-    /*height: 100%;*/
+    font-size: 62.5%;
+    font-family: Hiragino Sans GB,Helvetica,Arial,STHeiti,WenQuanYi Micro Hei,sans-serif;
   }
-
-  body {
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*height: 100%;*/
+  * {
+    padding: 0;
+    margin: 0;
   }
+  .content {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 .625rem .08rem rgba(0,0,0,.05);
 
-  #app {
-    /*color: #2c3e50;*/
-    /*margin-top: 0px;*/
-    /*max-width: 800px;*/
-    /*font-family: Source Sans Pro, Helvetica, sans-serif;*/
   }
-
-  #app a {
-    /*color: #42b983;*/
-    /*text-decoration: none;*/
+  .container {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .logo {
@@ -43,15 +45,11 @@
     height: 100px
   }
 
-  .cov-nav {
-    /*position: fixed;*/
-    height: 64px;
-    /*width: 100%;*/
-    background-color: #42b983;
-    /*top: 0;*/
-    /*left: 0;*/
-    /*z-index: 2;*/
-    /*font-size: 1.5rem;*/
-    /*color: #fff;*/
-  }
+  * {
+   padding: 0;
+   margin: 0;
+ }
+
+ .cov-nav {
+}
 </style>
