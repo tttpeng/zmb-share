@@ -30,14 +30,15 @@
         computed: {
           newsContent: function () {
             var reg = /style\s*?=\s*?(['"])[\s\S]*?\1/g
-            var first = this.news.Content.replace(reg, '')
+            var first = this.news.content.replace(reg, '')
             var two = first.replace(/<img /g, '<img style = "width:100%"}')
             console.log(two)
             return two
           },
           time: function () {
-            var date = new Date(parseInt(this.news.Time))
-            console.log(this.news.Time)
+            console.log(this.news.time)
+            var date = new Date(parseInt(this.news.time))
+            console.log(this.news.time)
             console.log(date)
             return date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate()
           }
@@ -45,9 +46,11 @@
 
         methods: {
           fetchNews (id) {
-            this.$http.get('http://101.201.48.88:6060/new/' + id)
+            this.$http.get('http://123.56.182.156:8080/zhongmeban/api/information/getInformationContent?informationId=' + id)
             .then(response => {
-              this.news = response.data
+              console.log(response)
+              this.news = response.body.data
+              console.log(this.news.content)
             })
             .catch(console.log)
           }

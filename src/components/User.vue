@@ -22,7 +22,7 @@
     methods: {
       fetchNews (id) {
         console.log('!!!--!!!')
-        this.$http.get('http://101.201.48.88:6060/new/4')
+        this.$http.get('http://123.56.182.156:8080/zhongmeban/api/information/getInformationContent?informationId=1')
         .then(response => {
           console.log('success!')
           this.news = response.data.result
